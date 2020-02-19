@@ -39,12 +39,12 @@ class TeamCityFormatter < XCPretty::Simple
   end
 
   def format_warning(message)
-    compile_error('Warning', message)
+    compile_error('Warning', message, true)
   end
 
   def format_compile_warning(_, file_path, reason, line, cursor)
     details = "#{file_path}: #{reason}\n#{line}\n#{cursor}"
-    compile_error('Compile warning', details)
+    compile_error('Compile warning', details, true)
   end
 
   private
