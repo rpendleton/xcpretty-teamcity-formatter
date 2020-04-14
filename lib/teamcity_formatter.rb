@@ -60,12 +60,8 @@ class TeamCityFormatter < XCPretty::Simple
   # @return [String]
   def compile_error(message, unformatted_details, warning = false)
     status = warning ? 'WARNING' : 'ERROR'
-    str    = "##teamcity[message text='#{message}' "
-    unless warning
-      error_details = format_error_details(unformatted_details)
-      str           += "errorDetails='#{error_details}' "
-    end
-    str + "status='#{status}']\n"
+    error_details = format_error_details(unformatted_details)
+    "##teamcity[message text='#{message}: #{error_details}' status='#{status}']\n"
   end
 
   # @param [Bool] finished
