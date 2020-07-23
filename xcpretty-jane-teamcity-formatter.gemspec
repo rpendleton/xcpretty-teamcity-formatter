@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = 'xcpretty-jane-teamcity-formatter'
-  spec.version       = '1.0.8'
+  spec.version       = '1.0.9'
   spec.authors       = ['Gordon Tucker']
   spec.email         = ['gordon@jane.com']
   spec.description   =

@@ -22,7 +22,7 @@ class TeamCityFormatter < XCPretty::Simple
   end
 
   def format_ld_warning(message)
-    compile_error('LD warning', super)
+    compile_error('LD warning', super, true)
   end
 
   def format_undefined_symbols(message, symbol, reference)
